@@ -1,0 +1,3 @@
+constants: FULL_CAPS_WITH_UNDERSCORE
+variable and functions: lower_case_with_underscore
+classnames: Capital_with_underscaore
