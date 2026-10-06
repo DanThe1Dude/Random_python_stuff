@@ -1,7 +1,7 @@
 from my_queue import Queue
 from node import Node
 
-question = tuple[str, str]
+Question = tuple[str, str]
 
 
 class Questions_Queue:
@@ -14,16 +14,20 @@ class Questions_Queue:
     def __repr__(self) -> str:
         return f"{self.correct}/{self.questions_num}"
 
-    def add_question(self, question : question) -> None:
+    def add_question(self, question : Question) -> None:
         self._queue.add_to_head(Node(question))
         self.questions_num += 1
 
-    def add_questions(self, questions : list[question]) -> None:
+    def add_questions(self, questions : list[Question]) -> None:
         for question in questions:
             self.add_question(question)
 
-    def next_question(self):
-        return self._queue.pop_head()
+    def next_question(self) -> Question:
+        result = self._queue.pop_head()
+        if result:
+            return result
+        else:
+            raise TypeError("Queue contained something that wasn't valid format")
 
     def mark_correct(self) -> None:
         self.correct += 1
