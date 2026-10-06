@@ -1,11 +1,11 @@
 import random
 import sys
 
-question_answer = {"a": "1", "b" : "2", "c": "3", "d" : "4", "e" : "5", "f" : "6", "g" : "7", "h" : "8", "i" : "9", "j" : "10", "k" : "11", "l" : "12", "m" : "13"}
+question_answer = {"January" : "1", "February" : "2", "March" : "3", "April" : "4", "May" : "5", "June" : "6", "July" : "7", "August" : "8", "September" : "9", "October" : "10", "November" : "11", "December" : "12"}
 
 Settings = {
     "Range": (0, len(question_answer)),
-    "Case Sensetive": True,
+    "Case Sensitive": True,
     "Swapped": False,
     "Shuffled": False,
     "Skip keyword": "skip",
