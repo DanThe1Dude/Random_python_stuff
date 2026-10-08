@@ -10,4 +10,4 @@ class Node:
         self.next = node
 
     def __repr__(self) -> str:
-        return self.val
+        return str(self.val)
